@@ -57,7 +57,7 @@ const projectSectionContent = [
     id: 1,
     title: "Snake Game",
     intro: "Productivity application with real-time updates, Reimagined classic game with modern UX principles",
-    repo: "https://github.com/navanee10/Snake-Game.git",
+    repo: "https://github.com/yourusername/snake-game",
     skills: ["Java", "JavaFX", "Java-Swing"],
     content: [
       "heading Project Overview",
@@ -82,7 +82,7 @@ const projectSectionContent = [
     id: 2,
     title: "Algo-Quest",
     intro: "Algorithm visualization and learning platform",
-    repo: "https://github.com/kishore-s-n/AlgoQuest.git",
+    repo: "https://github.com/yourusername/algo-quest",
     skills: ["Figma", "HTML/CSS", "JavaScript", "React"],
     content: [
       "heading Project Overview",
@@ -101,6 +101,38 @@ const projectSectionContent = [
     initEdges: [
       { id: 'e1-2', source: '1', target: '2' },
       { id: 'e2-3', source: '2', target: '3' }
+    ]
+  },
+  {
+    id: 3,
+    title: "OLA-LLD",
+    intro: "Low-level design implementation of OLA ride-sharing service",
+    repo: "https://github.com/navanee10/OLA-LLD",
+    skills: ["Java", "OOP", "SOLID Principles", "Design Patterns"],
+    content: [
+      "heading Project Overview",
+      "para Applied SOLID principles and object-oriented programming to create a scalable architecture",
+      "para Utilized design patterns like Strategy and Factory for ride allocation logic",
+      "heading Key Features",
+      "list Ride matching algorithm",
+      "list Dynamic fare calculation",
+      "list Driver-rider management system",
+      "heading Design Patterns Used",
+      "list Strategy Pattern for fare calculation",
+      "list Factory Pattern for object creation",
+      "list Observer Pattern for notifications"
+    ],
+    initNodes: [
+      { id: '1', position: { x: 0, y: 0 }, data: { label: 'Ride Service' } },
+      { id: '2', position: { x: 200, y: 0 }, data: { label: 'Fare Calculator' } },
+      { id: '3', position: { x: 100, y: 100 }, data: { label: 'User Manager' } },
+      { id: '4', position: { x: 300, y: 100 }, data: { label: 'Driver Manager' } }
+    ],
+    initEdges: [
+      { id: 'e1-2', source: '1', target: '2' },
+      { id: 'e1-3', source: '1', target: '3' },
+      { id: 'e1-4', source: '1', target: '4' },
+      { id: 'e3-4', source: '3', target: '4' }
     ]
   }
 ];
