@@ -27,7 +27,7 @@ const aboutSectionContent = {
     },
     {
       title: "Database",
-      items: ["MySQL", "MongoDB", "PostgreSQL"],
+      items: ["MySQL", "MongoDB"],
     },
     {
       title: "DevOps & Cloud",
@@ -57,7 +57,7 @@ const projectSectionContent = [
     id: 1,
     title: "Snake Game",
     intro: "Productivity application with real-time updates, Reimagined classic game with modern UX principles",
-    repo: "https://github.com/yourusername/snake-game",
+    repo: "https://github.com/navanee10/Snake-Game.git",
     skills: ["Java", "JavaFX", "Java-Swing"],
     content: [
       "heading Project Overview",
@@ -82,11 +82,11 @@ const projectSectionContent = [
     id: 2,
     title: "Algo-Quest",
     intro: "Algorithm visualization and learning platform",
-    repo: "https://github.com/yourusername/algo-quest",
+    repo: "https://github.com/kishore-s-n/AlgoQuest.git",
     skills: ["Figma", "HTML/CSS", "JavaScript", "React"],
     content: [
       "heading Project Overview",
-      "para Designed real-time competition interface with clear information architecture",
+      "para Designed realtime competition interface with clear information architecture",
       "para Implemented responsive front-end with React",
       "heading Features",
       "list Algorithm visualization",
@@ -107,7 +107,7 @@ const projectSectionContent = [
   id: 3,
   title: "OLA LLD",
   intro: "Low-level design implementation of OLA ride-sharing service",
-  repo: "https://github.com/navanee10/OLA-LLD",
+  repo: "https://github.com/navanee10/OLA-LLD.git",
   skills: ["Java", "OOP", "SOLID Principles", "Design Patterns"],
   content: [
       "heading Project Overview",
