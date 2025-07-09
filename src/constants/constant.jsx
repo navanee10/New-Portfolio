@@ -56,20 +56,53 @@ const projectSectionContent = [
   {
     id: 1,
     title: "Snake Game",
-    intro: "Productivity application with real-time updates, Reimagined classic game with modern /UX principles, Developed alternative control schemes based on user testing, Created style guide and design system for consistent visuals",
-    repo: "https://github.com/yourusername/ecommerce-project",
-  
+    intro: "Productivity application with real-time updates, Reimagined classic game with modern UX principles",
+    repo: "https://github.com/navanee10/Snake-Game.git",
     skills: ["Java", "JavaFX", "Java-Swing"],
-    
+    content: [
+      "heading Project Overview",
+      "para Reimagined classic game with modern UX principles",
+      "para Developed alternative control schemes based on user testing",
+      "heading Features",
+      "list Responsive game controls",
+      "list Score tracking system",
+      "list Customizable appearance"
+    ],
+    initNodes: [
+      { id: '1', position: { x: 0, y: 0 }, data: { label: 'Game Engine' } },
+      { id: '2', position: { x: 200, y: 0 }, data: { label: 'UI Components' } },
+      { id: '3', position: { x: 100, y: 100 }, data: { label: 'Score System' } }
+    ],
+    initEdges: [
+      { id: 'e1-2', source: '1', target: '2' },
+      { id: 'e1-3', source: '1', target: '3' }
+    ]
   },
   {
     id: 2,
     title: "Algo-Quest",
-    intro: "Designed real-time competition interface with clear information architecture, Implemented responsive front-end with React for optimal cross-device experience, Created interactive prototypes for user testing before development",
-    repo: "https://github.com/yourusername/task-manager",
+    intro: "Algorithm visualization and learning platform",
+    repo: "https://github.com/kishore-s-n/AlgoQuest.git",
     skills: ["Figma", "HTML/CSS", "JavaScript", "React"],
-    
-  },
+    content: [
+      "heading Project Overview",
+      "para Designed real-time competition interface with clear information architecture",
+      "para Implemented responsive front-end with React",
+      "heading Features",
+      "list Algorithm visualization",
+      "list Interactive coding challenges",
+      "list User progress tracking"
+    ],
+    initNodes: [
+      { id: '1', position: { x: 0, y: 0 }, data: { label: 'Frontend' } },
+      { id: '2', position: { x: 200, y: 0 }, data: { label: 'Backend' } },
+      { id: '3', position: { x: 100, y: 100 }, data: { label: 'Database' } }
+    ],
+    initEdges: [
+      { id: 'e1-2', source: '1', target: '2' },
+      { id: 'e2-3', source: '2', target: '3' }
+    ]
+  }
 ];
 
 export {
