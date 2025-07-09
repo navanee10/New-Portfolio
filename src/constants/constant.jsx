@@ -103,13 +103,13 @@ const projectSectionContent = [
       { id: 'e2-3', source: '2', target: '3' }
     ]
   },
-  {
-    id: 3,
-    title: "OLA-LLD",
-    intro: "Low-level design implementation of OLA ride-sharing service",
-    repo: "https://github.com/navanee10/OLA-LLD",
-    skills: ["Java", "OOP", "SOLID Principles", "Design Patterns"],
-    content: [
+ {
+  id: 3,
+  title: "OLA LLD",
+  intro: "Low-level design implementation of OLA ride-sharing service",
+  repo: "https://github.com/navanee10/OLA-LLD",
+  skills: ["Java", "OOP", "SOLID Principles", "Design Patterns"],
+  content: [
       "heading Project Overview",
       "para Applied SOLID principles and object-oriented programming to create a scalable architecture",
       "para Utilized design patterns like Strategy and Factory for ride allocation logic",
@@ -121,20 +121,44 @@ const projectSectionContent = [
       "list Strategy Pattern for fare calculation",
       "list Factory Pattern for object creation",
       "list Observer Pattern for notifications"
-    ],
-    initNodes: [
-      { id: '1', position: { x: 0, y: 0 }, data: { label: 'Ride Service' } },
-      { id: '2', position: { x: 200, y: 0 }, data: { label: 'Fare Calculator' } },
-      { id: '3', position: { x: 100, y: 100 }, data: { label: 'User Manager' } },
-      { id: '4', position: { x: 300, y: 100 }, data: { label: 'Driver Manager' } }
-    ],
-    initEdges: [
-      { id: 'e1-2', source: '1', target: '2' },
-      { id: 'e1-3', source: '1', target: '3' },
-      { id: 'e1-4', source: '1', target: '4' },
-      { id: 'e3-4', source: '3', target: '4' }
-    ]
-  }
+  ],
+  initNodes: [
+    { id: 'trip', position: { x: 0, y: 0 }, data: { label: 'Trip' } },
+    { id: 'tripMeta', position: { x: 200, y: 0 }, data: { label: 'TripMetaData' } },
+    { id: 'tripMap', position: { x: 400, y: 0 }, data: { label: 'TripMap' } },
+    { id: 'riderMap', position: { x: 0, y: 150 }, data: { label: 'RiderMap' } },
+    { id: 'driverMap', position: { x: 200, y: 150 }, data: { label: 'DriverMap' } },
+    { id: 'rider', position: { x: 0, y: 300 }, data: { label: 'Rider' } },
+    { id: 'driver', position: { x: 200, y: 300 }, data: { label: 'Driver' } },
+    { id: 'strategyMap', position: { x: 400, y: 150 }, data: { label: 'StrategyMap' } },
+    { id: 'pricingStrategy', position: { x: 600, y: 100 }, data: { label: 'PricingStrategy' } },
+    { id: 'driverMatchingStrategy', position: { x: 600, y: 200 }, data: { label: 'DriverMatchingStrategy' } },
+    { id: 'defaultPricing', position: { x: 800, y: 100 }, data: { label: 'DefaultPricingStrategy' } },
+    { id: 'timeBasedMatching', position: { x: 800, y: 200 }, data: { label: 'TimeBasedMatchingStrategy' } }
+  ],
+  initEdges: [
+    // Trip relationships
+    { id: 'e1', source: 'trip', target: 'tripMeta' },
+    { id: 'e2', source: 'trip', target: 'pricingStrategy' },
+    { id: 'e3', source: 'trip', target: 'driverMatchingStrategy' },
+    
+    // Map relationships
+    { id: 'e4', source: 'tripMap', target: 'trip' },
+    { id: 'e5', source: 'tripMap', target: 'tripMeta' },
+    { id: 'e6', source: 'tripMap', target: 'riderMap' },
+    { id: 'e7', source: 'tripMap', target: 'driverMap' },
+    
+    // Rider/Driver relationships
+    { id: 'e8', source: 'riderMap', target: 'rider' },
+    { id: 'e9', source: 'driverMap', target: 'driver' },
+    
+    // Strategy relationships
+    { id: 'e10', source: 'strategyMap', target: 'pricingStrategy' },
+    { id: 'e11', source: 'strategyMap', target: 'driverMatchingStrategy' },
+    { id: 'e12', source: 'pricingStrategy', target: 'defaultPricing' },
+    { id: 'e13', source: 'driverMatchingStrategy', target: 'timeBasedMatching' }
+  ]
+}
 ];
 
 export {
